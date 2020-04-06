@@ -1,0 +1,432 @@
+@font-face {
+    font-family: "San Francisco";
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: San Francisco;
+    background: linear-gradient(to left, #8942a8, #ba382f);
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: reflective;
+  }
+  
+  .logo {
+    margin-right: auto;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: rgba(190, 47, 126, 0.6);
+  }
+  
+  .cta {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(190, 47, 126, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: rgba(190, 47, 126, 0.6);
+  }
+  
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+
+.container {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+
+.container .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box:hover {
+    color: black;
+}
+
+.container  .box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #fff;
+    background:linear-gradient(to left, #8942a8, #ba382f);
+    filter: url(#wavy);
+}
+
+.container .box:hover:before {
+    background: #fff;
+    transition: 0.5s;
+}
+
+.container .box .content {
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container  .box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border: 4px solid #fff;
+    border-right: none;
+    background: rgba(255, 255, 255, .1);
+    filter: url(#wavy);
+}
+
+svg {
+    width: 0;
+    height: 0;
+}
+
+
+
+
+
+
+
+
+.text{
+    text-align: center;
+    color: white;
+}
+
+
+
+
+
+footer{
+	position: fixed;
+    bottom: 0;
+    text-align: center;
+    height: 10px;
+    margin-top: 40px;;
+    vertical-align: bottom;
+}
+ 
+@media (max-height:200px){
+	footer { position: static; }
+    header { padding-top:40px; }
+
+}
+
+ 
+ 
+.footer-distributed{
+	/* background: linear-gradient(to left, #8942a8, #ba382f); */
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 20px 50px;
+    margin-top: 80px;
+    text-align: center;
+    vertical-align: bottom;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+    vertical-align: bottom;
+    text-align: center;
+}
+ 
+
+ 
+/* Footer Center */
+ 
+.footer-distributed .footer-center{
+    width: 35%;
+    text-align: center;
+}
+ 
+ 
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+    vertical-align: bottom;
+    text-align: center;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+    line-height: 38px;
+    text-align: center;
+    vertical-align: bottom;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+    vertical-align: bottom;
+    margin:0;
+    text-align: center;
+}
+
+ 
+.footer-distributed .footer-center p span{
+    text-align: center;
+    display:block;
+	font-weight: normal;
+	font-size:14px;
+    line-height:2;
+    text-align: center;
+
+}
+
+ 
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+    text-decoration: none;;
+    text-align: center;
+}
+ 
+ 
+
+ 
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+ 
+ 
+@media (max-width: 880px) {
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+        text-align: center;
+       
+	}
+ 
+	.footer-distributed .footer-center i{
+        margin-left: 0;
+        text-align: center;
+     
+	}
+ 
+}
+
+
+.social{
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  background:linear-gradient(to left, #8942a8, #ba382f);
+  line-height: 60px;
+  border-radius: 50%;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: .5s;
+  text-decoration: none;
+  
+}
+.social:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  /* background: #d35400; */
+  border-radius: 50%;
+  transform: scale(.9);
+  z-index: -1;
+  transition: .5s;
+}
+.social:nth-child(1):before{
+  background: #4267B2;
+}
+.social:nth-child(2):before{
+  background: #1DA1F2;
+}
+.social:nth-child(3):before{
+  background: #E1306C;
+}
+.social:nth-child(4):before{
+  background: rgb(65, 1, 148);
+}
+.social:nth-child(5):before{
+  background: #ff0000;
+}
+.social:hover:before{
+  filter: blur(3px);
+  transform: scale(1.2);
+  /* box-shadow: 0 0 15px #d35400; */
+}
+.social:nth-child(1):hover:before{
+  box-shadow: 0 0 15px #4267B2;
+}
+.social:nth-child(2):hover:before{
+  box-shadow: 0 0 15px #1DA1F2;
+}
+.social:nth-child(3):hover:before{
+  box-shadow: 0 0 15px #E1306C;
+}
+.social:nth-child(4):hover:before{
+  box-shadow: 0 0 15px #2867B2;
+}
+.social:nth-child(5):hover:before{
+  box-shadow: 0 0 15px #ff0000;
+}
+.social:nth-child(1):hover{
+  color: #456cba;
+  box-shadow: 0 0 15px #4267B2;
+  text-shadow: 0 0 15px #4267B2;
+}
+.social:nth-child(2):hover{
+  color: #26a4f2;
+  box-shadow: 0 0 15px #1DA1F2;
+  text-shadow: 0 0 15px #1DA1F2;
+}
+.social:nth-child(3):hover{
+  color: #e23670;
+  box-shadow: 0 0 15px #E1306C;
+  text-shadow: 0 0 15px #E1306C;
+}
+.social:nth-child(4):hover{
+  color: #2a6cbb;
+  box-shadow: 0 0 15px #2867B2;
+  text-shadow: 0 0 15px #2867B2;
+}
+
+
+
+.socialki {
+  display: inline-block;
+}
+
+
+
+
+
+
